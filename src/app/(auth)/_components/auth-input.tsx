@@ -8,6 +8,7 @@ const AuthInput = ({ id, type, label }: AuthInputProps) => {
   return (
     <div className="relative group w-full">
       <input
+        id={id}
         type={type}
         required
         className="form-control block w-full h-[4em] px-4 py-5 text-sm font-normal text-gray-700 bg-white border border-gray-300 rounded-sm m-0

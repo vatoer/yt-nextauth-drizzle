@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const LoginForm = () => {
   return (
-    <div className="w-[300px] rounded-lg border p-6 border-blue-700">
+    <div className="w-[300px] rounded-lg border p-6 border-gray-300 shadow-lg">
       <div className="flex flex-col items-center gap-2 w-full">
         <Image
           src="/logo.png"
