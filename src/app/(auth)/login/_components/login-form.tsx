@@ -25,7 +25,7 @@ const LoginForm = () => {
               OR
             </p>
           </div>
-          <LoginWithGoogle />
+          <LoginWithGoogle callbackUrl="/protected" />
         </form>
       </div>
     </div>
