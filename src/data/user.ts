@@ -11,7 +11,7 @@ const getUserByEmail = async (email: string) => {
     id: "1",
     name: "Admin",
     email: "admin@example.io",
-    password: "admin",
+    password: "C00lPass!",
     image: "https://randomuser.me/api/portraits",
   };
   return user;

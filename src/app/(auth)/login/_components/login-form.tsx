@@ -4,7 +4,9 @@ import LoginWithGoogle from "@/app/auth/_components/login-with-google";
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useTransition } from "react";
 import { useForm } from "react-hook-form";
+import { login } from "../_actions/login";
 import { LoginSchema, TLogin } from "../_zodschema/login";
 
 const LoginForm = () => {
@@ -16,8 +18,15 @@ const LoginForm = () => {
     resolver: zodResolver(LoginSchema),
   });
 
+  const [isPending, startTransition] = useTransition();
+
   const onSubmit = (data: TLogin) => {
     console.log(data);
+    startTransition(async () => {
+      // login logic here
+      const l = await login(data);
+      console.log(l);
+    });
   };
 
   return (
