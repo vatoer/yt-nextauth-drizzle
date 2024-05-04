@@ -32,13 +32,12 @@ const LoginForm = () => {
         />
         <form
           onSubmit={handleSubmit(onSubmit)}
-          noValidate
           className="flex flex-col gap-4 w-full"
         >
           <AuthInput
             register={register}
             label="Email"
-            type="text"
+            type="email"
             id="email"
             error={errors.email}
           />
