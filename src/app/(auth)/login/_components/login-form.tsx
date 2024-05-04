@@ -38,7 +38,7 @@ const LoginForm = () => {
           <AuthInput
             register={register}
             label="Email"
-            type="email"
+            type="text"
             id="email"
             error={errors.email}
           />
