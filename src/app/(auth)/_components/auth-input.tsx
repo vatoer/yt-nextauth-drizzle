@@ -1,13 +1,18 @@
+import { FieldError, UseFormRegister } from "react-hook-form";
+
 interface AuthInputProps {
   id: string;
   type: string;
   label: string;
+  register: UseFormRegister<any>;
+  error?: FieldError | undefined;
 }
 
-const AuthInput = ({ id, type, label }: AuthInputProps) => {
+const AuthInput = ({ id, type, label, register, error }: AuthInputProps) => {
   return (
     <div className="relative group w-full">
       <input
+        {...register(id)}
         id={id}
         type={type}
         required
@@ -22,6 +27,11 @@ const AuthInput = ({ id, type, label }: AuthInputProps) => {
       >
         {label}
       </label>
+      {error && (
+        <span className="text-red-500 w-[250px] overflow-auto whitespace-normal flex-shrink-0 break-words block">
+          {error.message}
+        </span>
+      )}
     </div>
   );
 };

@@ -9,5 +9,6 @@
     "source.fixAll.eslint": "explicit",
     "source.sortImports": "explicit"
   },
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
